@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type='text/javascript' src='../teste_1/TernaryUtils.js'></script>
+
+	<style>
+        text {
+            font: 12px sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="plotly-div" >
+</div>
+
+<script>
+
+    var chart = TernaryUtils();
+    var data = [];
+
+    var newData = {
+        "ID":"teste1",
+        "Name":"sand",
+        "values": [[100,0,0],[90,0,10],[90,10,0]],
+        "mode": 'area', //area, lines, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true, //hide legend
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste2",
+        "Name":"clayey sand",
+        "values": [[90,10,0],[50,50,0],[50,100/3,50/3],[90,20/3,10/3]],
+        "mode": 'area', //area, lines, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true, //hide legend
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste3",
+        "Name":"muddy sand",
+        "values": [[50,100/3,50/3],[90,20/3,10/3],[90,10/3,20/3],[50,50/3,100/3]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste4",
+        "Name":"silty sand",
+        "values": [[90,10/3,20/3],[50,50/3,100/3],[50,0,50],[90,0,10]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste5",
+        "Name":"sandy clay",
+        "values": [[50,50,0],[50,100/3,50/3],[10,180/3,90/3],[10,90,0]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste6",
+        "Name":"sandy mud",
+        "values": [[50,100/3,50/3],[10,180/3,90/3],[10,90/3,180/3],[50,50/3,100/3]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste7",
+        "Name":"sandy slit",
+        "values": [[10,90/3,180/3],[50,50/3,100/3],[50,0,50],[10,0,90]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste8",
+        "Name":"clay",
+        "values": [[0,100,0],[0,200/3,100/3],[10,180/3,90/3],[10,90,0]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste9",
+        "Name":"mud",
+        "values": [[0,200/3,100/3],[10,180/3,90/3],[10,90/3,180/3],[0,100/3,200/3]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste10",
+        "Name":"silt",
+        "values": [[10,90/3,180/3],[0,100/3,200/3],[0,0,100],[10,0,90]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    var axis = ['Sand','Clay','Silt'];
+    var layout = chart.layout(axis);
+    var options = chart.options();
+
+    chart.updateChart('plotly-div', data, layout, options);
+
+
+</script>
+</body>
+</html>

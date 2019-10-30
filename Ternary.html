@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type='text/javascript' src='../teste_1/TernaryUtils.js'></script>
+
+	<style>
+        text {
+            font: 12px sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="plotly-div" >
+</div>
+
+<script>
+
+    var chart = TernaryUtils();
+    var data = [];
+
+    var newData = {
+        "ID":"teste1",
+        "Name":"Sandy loam",
+        "values": [[0,70,30],[15,85,0],[20,80,0],[20,53,32],[5,53,42],[5,45,50],[0,50,50]],
+        "mode": 'area', //area, lines, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true, //hide legend
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste2",
+        "Name":"Loamy sand",
+        "values": [[0,90,10],[10,90,0],[15,85,0],[0,70,30]],
+        "mode": 'area', //area, lines, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true, //hide legend
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste3",
+        "Name":"Sandy clay loam",
+        "values": [[20,80,0],[35,65,0],[35,45,20],[28,45,27],[20,53,32]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste4",
+        "Name":"clay loam",
+        "values": [[40,45,15],[40,20,40],[28,20,52],[28,45,27],[40,45,15]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste5",
+        "Name":"sandy clay",
+        "values": [[35,65,0],[35,45,20],[55,45,0]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste6",
+        "Name":"silty clay",
+        "values": [[60,0,40],[40,0,60],[40,20,40]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste7",
+        "Name":"silty loam",
+        "values": [[0,50,50],[28,22,50],[28,0,72],[12,0,88],[12,8,80],[0,20,80]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste8",
+        "Name":"sand",
+        "values": [[0,100,0],[10,90,0],[0,90,10]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste9",
+        "Name":"silty clay loam",
+        "values": [[28,0,72],[28,20,52],[40,20,40],[40,0,60]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste10",
+        "Name":"clay",
+        "values": [[55,45,0],[100,0,0],[60,0,40],[40,20,40],[40,45,15]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste11",
+        "Name":"silt",
+        "values": [[0,0,100],[0,20,80],[12,8,80],[12,0,88]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+    newData = {
+        "ID":"teste12",
+        "Name":"loam",
+        "values": [[28,45,27],[28,22,50],[5,45,50],[5,53,42],[20,53,32]],
+        "mode": 'area', //line, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true,
+        "text": ''
+    };
+    chart.addData(newData, data, "#FFFFFF");
+
+
+    newData = {
+        "ID":"teste13",
+        "Name":"Dataset 1",
+        "values": [[2,2,2],[75,25,0],[70,10,20],[75,20,5],[5,60,35],[10,80,10],[10,90,0],[20,70,10],[10,20,70],[15,5,80],[10,10,80],[20,10,70]],
+        "mode": 'markers', //area,lines, markers
+        "disabled": false, //change initial appearance (if it's showing)
+        "userChoice": true, //hide legend
+        "text":  ['point 1', 'point 2', 'point 3', 'point 4', 'point 5', 'point 6', 'point 7', 'point 8', 'point 9', 'point 10', 'point 11']
+    };
+    chart.addData(newData, data);
+
+    var axis = ['Clay','Sand','Silt'];
+    var layout = chart.layout(axis);
+    var options = chart.options();
+
+    chart.updateChart('plotly-div', data, layout, options);
+
+
+</script>
+</body>
+</html>
